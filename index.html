@@ -1,168 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="utf-8" />
-    <title>Marcelo Vasconcelos Santiago</title>
-
-    <!-- Meta Data -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta name="author" content="Marcelo Vasconcelos Santiago" />
-    <meta name="description" content="Portifólio de trabalhos realizados e formação de Marcelo Vasconcelos Santiago" />
-    <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/styles/style-dark.css" />
-
-
+<meta charset="utf-8">
+<title>Marcelo Vasconcelos Santiago | Desenvolvedor Web</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Marcelo Vasconcelos Santiago">
+<meta name="description" content="Portfólio de projetos, formação e contato de Marcelo Vasconcelos Santiago, desenvolvedor web em Brasília-DF.">
+<style>
+:root{--bg:#070b14;--card:#0d1424;--line:#1c2a44;--txt:#c9d6ee;--dim:#7d8fb0;--a:#22d3ee;--b:#8b5cf6;--g:#34d399;--mono:ui-monospace,"Cascadia Code","Fira Code",Consolas,monospace}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;
+background-image:linear-gradient(rgba(34,211,238,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.04) 1px,transparent 1px);background-size:40px 40px}
+a{color:var(--a);text-decoration:none}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:9;background:rgba(7,11,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font:700 15px var(--mono);color:var(--a)}
+nav ul{display:flex;gap:22px;list-style:none;font:13px var(--mono)}
+nav ul a{color:var(--dim)}nav ul a:hover{color:var(--a)}
+.hero{padding:88px 0 64px;display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:center}
+.tag{font:13px var(--mono);color:var(--g)}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.1;margin:10px 0 14px;color:#fff}
+h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.type{font:clamp(15px,2.4vw,19px) var(--mono);color:var(--a);min-height:30px}
+.type::after{content:"▍";animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:560px;color:var(--dim);margin:14px 0 26px}
+.btn{display:inline-block;padding:10px 20px;border-radius:8px;font:600 14px var(--mono);border:1px solid var(--a);color:var(--a);margin:0 10px 10px 0;transition:.2s}
+.btn.p{background:var(--a);color:#04121a}
+.btn:hover{box-shadow:0 0 22px rgba(34,211,238,.45);transform:translateY(-2px)}
+.pic{width:220px;height:220px;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 0 50px rgba(139,92,246,.35)}
+.pic img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:var(--card);display:block}
+section{padding:56px 0}
+h2{font:700 24px var(--mono);color:#fff;margin-bottom:28px}
+h2::before{content:"// ";color:var(--b)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--a);transform:translateY(-5px);box-shadow:0 10px 34px rgba(34,211,238,.13)}
+.thumb{height:170px;background:linear-gradient(135deg,#101b33,#1a1040);display:flex;align-items:center;justify-content:center;font:13px var(--mono);color:var(--dim);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font-size:17px;color:#fff}
+.body p{font-size:14px;color:var(--dim);flex:1}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips i{font:11px var(--mono);font-style:normal;padding:2px 9px;border-radius:99px;border:1px solid var(--line);color:var(--a)}
+.more{font:13px var(--mono)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.term{background:#050810;border:1px solid var(--line);border-radius:12px;font:13px/1.8 var(--mono);overflow:hidden}
+.term div:first-child{background:var(--card);padding:8px 14px;color:var(--dim);border-bottom:1px solid var(--line)}
+.term div+div{padding:14px 16px}
+.term b{color:var(--g);font-weight:400}.term em{color:var(--b);font-style:normal}
+.tl{border-left:2px solid var(--line);padding-left:22px;display:grid;gap:22px}
+.tl article{position:relative}
+.tl article::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--a)}
+.tl h3{font-size:16px;color:#fff}
+.tl small{font:12px var(--mono);color:var(--b)}
+.tl p{font-size:14px;color:var(--dim)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two h3.s{font:600 16px var(--mono);color:var(--a);margin-bottom:18px}
+ul.c{list-style:none;display:grid;gap:8px;font-size:14px}
+ul.c li{padding:9px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px}
+ul.c small{display:block;color:var(--dim);font:11px var(--mono)}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.ct a{display:block;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--txt);transition:.2s}
+.ct a:hover{border-color:var(--b);box-shadow:0 0 24px rgba(139,92,246,.25)}
+.ct small{display:block;font:12px var(--mono);color:var(--dim)}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font:12px var(--mono);color:var(--dim)}
+@media(max-width:760px){.hero,.about,.two{grid-template-columns:1fr}.pic{order:-1;width:150px;height:150px}nav ul{gap:12px}.logo{display:none}}
+</style>
 </head>
+<body>
+<nav><div class="w"><span class="logo">&lt;marcelo/&gt;</span>
+<ul><li><a href="#projetos">projetos</a></li><li><a href="#sobre">sobre</a></li><li><a href="#formacao">formação</a></li><li><a href="#contato">contato</a></li></ul></div></nav>
 
-<body class="bg-triangles">
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader__wrap">
-            <div class="circle-pulse">
-                <div class="circle-pulse__1"></div>
-                <div class="circle-pulse__2"></div>
-            </div>
-            <div class="preloader__progress"><span></span></div>
-        </div>
-    </div>
+<main class="w">
+<header class="hero">
+<div>
+<div class="tag">&gt; olá, mundo. eu sou</div>
+<h1><span>Marcelo Vasconcelos Santiago</span></h1>
+<div class="type" id="type"></div>
+<p class="lead">Graduado em Análise e Desenvolvimento de Sistemas e pós-graduado em Engenharia de Software. Construo aplicações web e mobile e uso design gráfico para criar interfaces mais atraentes.</p>
+<a class="btn p" href="#projetos">Ver projetos</a>
+<a class="btn" href="https://github.com/marcelosantiagok" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="#contato">Contato</a>
+</div>
+<div class="pic"><img src="assets/img/profile.jpeg" alt="Foto de Marcelo Vasconcelos Santiago"></div>
+</header>
 
-    <main class="main">
-        <div class="container gutter-top">
-            <!-- Header -->
-            <header class="header box">
-                <div class="header__left">
-                    <div class="header__photo">
-                        <img class="header__photo-img" src="assets/img/profile.jpeg" alt="Marcelo Vasconcelos Santiago">
-                    </div>
-                    <div class="header__base-info">
-                        <h4 class="title titl--h4">Marcelo Vasconcelos Santiago</h4>
-                        <div class="status">Desenvolvedor WEB</div>
-                        <ul class="header__social">
-                            <li>
-                                <a href="https://www.linkedin.com/in/marcelo-vasconcelos-santiago-b94491160" target="_blank">
-                                    <i class="font-icon icon-linkedin"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/marcelosantiagok" target="_blank">
-                                    <i class="font-icon icon-github"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCpTVUmvnCbpnWv-nI-tjKOw" target="_blank">
-                                    <i class="font-icon icon-youtube"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/marcelo_santiag" target="_blank">
-                                    <i class="font-icon icon-twitter"></i>
-                                </a>
-                            </li>
+<section id="projetos">
+<h2>projetos</h2>
+<div class="grid">
+<article class="card">
+<div class="thumb"><img src="assets/images/livroprojetomobile.png" alt="Gerenciador de Livros" onerror="this.replaceWith('gerenciadordelivros')"></div>
+<div class="body"><h3>Gerenciador de Livros</h3><p>Projeto de desenvolvimento mobile para gerenciar uma biblioteca de livros.</p>
+<div class="chips"><i>Java</i><i>Mobile</i></div>
+<a class="more" href="https://github.com/marcelosantiagok/gerenciadordelivros" target="_blank" rel="noopener">ver no GitHub →</a></div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/images/1.png" alt="My Residence" onerror="this.replaceWith('myresidence')"></div>
+<div class="body"><h3>My Residence</h3><p>Site desenvolvido na Uniplan-DF, com front-end em HTML e CSS e back-end em PHP.</p>
+<div class="chips"><i>HTML</i><i>CSS</i><i>PHP</i></div>
+<a class="more" href="https://github.com/marcelosantiagok/myresidence" target="_blank" rel="noopener">ver no GitHub →</a></div>
+</article>
+<article class="card">
+<div class="thumb"><img src="assets/images/3.png" alt="Locadora" onerror="this.replaceWith('Locadora')"></div>
+<div class="body"><h3>Locadora</h3><p>Sistema de locadora desenvolvido na Uniplan-DF.</p>
+<div class="chips"><i>C#</i><i>Desktop</i></div>
+<a class="more" href="https://github.com/marcelosantiagok/Locadora" target="_blank" rel="noopener">ver no GitHub →</a></div>
+</article>
+</div>
+</section>
 
-                        </ul>
-                    </div>
-                </div>
-                <div class="header__right">
-                    <ul class="header__contact">
-                        <li>
-                            <span class="overhead">
-                                Email
-                            </span>
-                            marcelosantiagok@gmail.com
-                        </li>
-                        <li>
-                            <span class="overhead">Telefone</span><a
-                                href="https://api.whatsapp.com/send?phone=55xxxxxxxxxxx">+55 (xx) xxxxx-xxxx </a>
-                        </li>
-                    </ul>
-                    <ul class="header__contact">
+<section id="sobre">
+<h2>sobre</h2>
+<div class="about">
+<div>
+<p>Olá, me chamo Marcelo. Sou graduado em Análise e Desenvolvimento de Sistemas (Uniplan-DF) e pós-graduado em Engenharia de Software (Estácio de Sá).</p><br>
+<p>Ultimamente tenho focado em Design Gráfico para complementar o Front-End. Concluí cursos de Corel Draw e Photoshop, pois acredito que conhecer os fundamentos do design ajuda a criar páginas web mais atraentes.</p><br>
+<p>Também estudo e pratico inglês para alcançar a fluência, já que as tecnologias e o suporte da área de TI são em sua maioria em inglês. Estou publicando meus projetos no GitHub. Deus nos abençoe.</p>
+</div>
+<div class="term"><div>● ● ● marcelo@dev:~</div>
+<div><b>$</b> cat status.json<br>{<br>&nbsp;&nbsp;<em>"cargo"</em>: "Desenvolvedor Web",<br>&nbsp;&nbsp;<em>"local"</em>: "Brasília - DF",<br>&nbsp;&nbsp;<em>"estudando"</em>: ["Design Gráfico", "Inglês"],<br>&nbsp;&nbsp;<em>"aberto_a"</em>: "novos projetos"<br>}</div></div>
+</div>
+</section>
 
-                        <li>
-                            <span class="overhead">
-                                Endereço
-                            </span>
-                            Brasília - DF
-                        </li>
-                    </ul>
-                </div>
-            </header>
-            <div class="row sticky-parent">
-                <!-- Sidebar nav -->
-                <aside class="col-12 col-md-12 col-lg-2">
-                    <div class="sidebar box sticky-column">
-                        <ul class="nav">
-                            <li class="nav__item">
-                                <a class="active" href="index.html">
-                                    <i class="icon-user"></i>
-                                    Sobre Mim
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="resume.html">
-                                    <i class="icon-file-text"></i>
-                                    Currículo
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="works.html">
-                                    <i class="icon-codesandbox"></i>
-                                    Portifólio
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
+<section id="formacao">
+<h2>formação &amp; experiência</h2>
+<div class="two">
+<div>
+<h3 class="s">$ educação</h3>
+<div class="tl">
+<article><small>2019 — 2021</small><h3>Pós-Graduação em Engenharia de Software</h3><p>Universidade Estácio de Sá</p></article>
+<article><small>2018 — 2019</small><h3>Análise e Desenvolvimento de Sistemas</h3><p>Centro Universitário Planalto do DF (Uniplan-DF)</p></article>
+</div>
+<br>
+<h3 class="s">$ cursos</h3>
+<ul class="c">
+<li><small>Udemy · 2023</small>Masterizando o Photoshop, Recursos Especiais</li>
+<li><small>Hotmart · 2022</small>Curso completo de Corel Draw (40h)</li>
+<li><small>Udemy · 2022</small>Design Gráfico com Corel Draw (10,5h e 21,5h) e Photoshop Definitivo (14,5h)</li>
+<li><small>IFTO · 2020</small>Programador Web (200h)</li>
+<li><small>UFRN · 2020</small>Programador de Dispositivos Móveis (200h)</li>
+<li><small>Senac · 2020</small>Administrador de Banco de Dados (200h)</li>
+<li><small>Fundação Bradesco e Udemy · 2018–2019</small>Lógica de programação e algoritmos</li>
+</ul>
+</div>
+<div>
+<h3 class="s">$ experiência</h3>
+<div class="tl">
+<article><small>2018 — atual</small><h3>Agente de Portaria</h3><p>Excelência Serviços. Controle de acesso, gerenciamento de sistemas de segurança CFTV e apoio a serviços contábeis.</p></article>
+<article><small>2010 — 2018</small><h3>Agente de Portaria</h3><p>A Casa do Síndico</p></article>
+<article><small>2008 — 2009</small><h3>Operador de Caixa (Auxiliar Operacional II)</h3><p>Super Maia Supermercados</p></article>
+</div>
+<br>
+<h3 class="s">$ certificação</h3>
+<ul class="c"><li><small>Star · 2010</small>Curso de Formação de Vigilantes</li></ul>
+</div>
+</div>
+</section>
 
-                <!-- Conteúdo do site -->
-                <div class="col-12 col-md-12 col-lg-10">
-                    <div class="box box-content">
-                        <!-- Sobre Mim  -->
-                        <div class="pb-0 pb-sm-2">
-                            <h1 class="title title--h1 first-title title__separate">Sobre Mim</h1>
-                            <p>Olá me chamo Marcelo, sou graduado em Analise e Desenvolvimento de Sistemas ( Uniplan DF ) , pos-graduado em Engenharia de Software ( Estácio de Sá)
-                            Ultimamente tenho focado meus estudos na parte de Design Gráfico,
-                            para complementar na parte de Front-End, concluí cursos de Corel Draw, Photoshop com isto masterizando profissionalmente acredito que 
-                            um conhecimento sobre os fundamentos do design gráfico, ajudam o profissional na criação de páginas web mais atraentes, então resolvi dar mais atenção a esta parte.
-                            Venho ultimamente estudando e praticando a lingua inglesa com o propósito de alcançar a fluencia pois utilizamos bastante as tecnologias que por padrão são em inglês, e suporte na área de ti encontramos em inglês.
-                            Estarei publicando meus projetos no github, e aqui assim que possível. Deus nos abençoe.
+<section id="contato">
+<h2>contato</h2>
+<div class="ct">
+<a href="mailto:marcelosantiagok@gmail.com"><small>email</small>marcelosantiagok@gmail.com</a>
+<a href="https://github.com/marcelosantiagok" target="_blank" rel="noopener"><small>github</small>marcelosantiagok</a>
+<a href="https://www.linkedin.com/in/marcelo-vasconcelos-santiago-b94491160" target="_blank" rel="noopener"><small>linkedin</small>Marcelo Vasconcelos Santiago</a>
+<a href="https://www.youtube.com/channel/UCpTVUmvnCbpnWv-nI-tjKOw" target="_blank" rel="noopener"><small>youtube</small>Meu canal</a>
+<a href="https://twitter.com/marcelo_santiag" target="_blank" rel="noopener"><small>twitter</small>@marcelo_santiag</a>
+</div>
+</section>
+</main>
 
-                                
-                                                     
-                            </p>
+<footer>© <span id="y"></span> Marcelo Vasconcelos Santiago · Brasília - DF</footer>
 
-                            <!-- Footer -->
-                            <footer class="footer">
-                                © Marcelo Vasconcelos Santiago
-                            </footer>
-                        </div>
-                    </div>
-                </div>
-    </main>
-
-    <!-- SVG masks -->
-    <svg class="svg-defs">
-        <clipPath id="avatar-box">
-            <path
-                d="M1.85379 38.4859C2.9221 18.6653 18.6653 2.92275 38.4858 1.85453 56.0986.905299 77.2792 0 94 0c16.721 0 37.901.905299 55.514 1.85453 19.821 1.06822 35.564 16.81077 36.632 36.63137C187.095 56.0922 188 77.267 188 94c0 16.733-.905 37.908-1.854 55.514-1.068 19.821-16.811 35.563-36.632 36.631C131.901 187.095 110.721 188 94 188c-16.7208 0-37.9014-.905-55.5142-1.855-19.8205-1.068-35.5637-16.81-36.63201-36.631C.904831 131.908 0 110.733 0 94c0-16.733.904831-37.9078 1.85379-55.5141z" />
-        </clipPath>
-        <clipPath id="avatar-hexagon">
-            <path
-                d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
-        </clipPath>
-    </svg>
-
-    <div class="back-to-top"></div>
-
-    <!-- JavaScripts -->
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/common.js"></script>
-
-
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var f=["Desenvolvedor Web","Analista de Sistemas","Engenheiro de Software","Front-End + Design"],i=0,j=0,d=false,el=document.getElementById('type');
+(function t(){var s=f[i];j+=d?-1:1;el.textContent=s.slice(0,j);
+var w=d?35:70;if(!d&&j===s.length){d=true;w=1400}else if(d&&j===0){d=false;i=(i+1)%f.length;w=300}
+setTimeout(t,w)})();
+</script>
 </body>
-
 </html>
