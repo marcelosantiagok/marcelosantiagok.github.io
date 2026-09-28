@@ -40,6 +40,10 @@ h2::before{content:"// ";color:var(--b)}
 .card:hover{border-color:var(--a);transform:translateY(-5px);box-shadow:0 10px 34px rgba(34,211,238,.13)}
 .thumb{height:170px;background:linear-gradient(135deg,#101b33,#1a1040);display:flex;align-items:center;justify-content:center;font:13px var(--mono);color:var(--dim);overflow:hidden}
 .thumb img{width:100%;height:100%;object-fit:cover}
+.card.new{border-color:var(--g);box-shadow:0 0 26px rgba(52,211,153,.18)}
+.thumb{position:relative}
+.badge{position:absolute;top:12px;right:12px;z-index:2;font:700 11px var(--mono);letter-spacing:1px;padding:4px 10px;border-radius:99px;background:var(--g);color:#04120c;animation:pl 2s infinite}
+@keyframes pl{50%{box-shadow:0 0 14px var(--g)}}
 .body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .body h3{font-size:17px;color:#fff}
 .body p{font-size:14px;color:var(--dim);flex:1}
@@ -91,6 +95,13 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font:12
 <section id="projetos">
 <h2>projetos</h2>
 <div class="grid">
+<article class="card new">
+<div class="thumb"><span class="badge">NOVO</span><img src="https://raw.githubusercontent.com/marcelosantiagok/listadecompras/main/assets/readme/compras.png" alt="App Lista de Compras" onerror="this.replaceWith('listadecompras')"></div>
+<div class="body"><h3>Lista de Compras</h3><p>App Android para organizar compras e tarefas em listas separadas, com importação rápida de itens, quantidades e unidades, histórico com restauração e dados salvos no aparelho.</p>
+<div class="chips"><i>React Native</i><i>Expo</i><i>TypeScript</i><i>Android</i></div>
+<a class="more" href="https://github.com/marcelosantiagok/listadecompras" target="_blank" rel="noopener">ver no GitHub →</a>
+<a class="more" href="https://drive.google.com/file/d/1CKsRKdNizh1ZQNWHoDCa1oi3zqlrWew7/view?usp=drivesdk" target="_blank" rel="noopener">⬇ baixar APK</a></div>
+</article>
 <article class="card">
 <div class="thumb"><img src="assets/images/livroprojetomobile.png" alt="Gerenciador de Livros" onerror="this.replaceWith('gerenciadordelivros')"></div>
 <div class="body"><h3>Gerenciador de Livros</h3><p>Projeto de desenvolvimento mobile para gerenciar uma biblioteca de livros.</p>
