@@ -1,205 +1,209 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<title>Marcelo Vasconcelos Santiago | Desenvolvedor Web</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Marcelo Vasconcelos Santiago">
-<meta name="description" content="Portfólio de projetos, formação e contato de Marcelo Vasconcelos Santiago, desenvolvedor web em Brasília-DF.">
-<style>
-:root{--bg:#070b14;--card:#0d1424;--line:#1c2a44;--txt:#c9d6ee;--dim:#7d8fb0;--a:#22d3ee;--b:#8b5cf6;--g:#34d399;--mono:ui-monospace,"Cascadia Code","Fira Code",Consolas,monospace}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;
-background-image:linear-gradient(rgba(34,211,238,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.04) 1px,transparent 1px);background-size:40px 40px}
-a{color:var(--a);text-decoration:none}
-.w{max-width:1040px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:9;background:rgba(7,11,20,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .w{display:flex;align-items:center;justify-content:space-between;height:56px}
-.logo{font:700 15px var(--mono);color:var(--a)}
-nav ul{display:flex;gap:22px;list-style:none;font:13px var(--mono)}
-nav ul a{color:var(--dim)}nav ul a:hover{color:var(--a)}
-.hero{padding:88px 0 64px;display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:center}
-.tag{font:13px var(--mono);color:var(--g)}
-h1{font-size:clamp(34px,6vw,58px);line-height:1.1;margin:10px 0 14px;color:#fff}
-h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
-.type{font:clamp(15px,2.4vw,19px) var(--mono);color:var(--a);min-height:30px}
-.type::after{content:"▍";animation:bl 1s steps(1) infinite}
-@keyframes bl{50%{opacity:0}}
-.lead{max-width:560px;color:var(--dim);margin:14px 0 26px}
-.btn{display:inline-block;padding:10px 20px;border-radius:8px;font:600 14px var(--mono);border:1px solid var(--a);color:var(--a);margin:0 10px 10px 0;transition:.2s}
-.btn.p{background:var(--a);color:#04121a}
-.btn:hover{box-shadow:0 0 22px rgba(34,211,238,.45);transform:translateY(-2px)}
-.pic{width:220px;height:220px;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 0 50px rgba(139,92,246,.35)}
-.pic img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:var(--card);display:block}
-section{padding:56px 0}
-h2{font:700 24px var(--mono);color:#fff;margin-bottom:28px}
-h2::before{content:"// ";color:var(--b)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
-.card:hover{border-color:var(--a);transform:translateY(-5px);box-shadow:0 10px 34px rgba(34,211,238,.13)}
-.thumb{height:170px;background:linear-gradient(135deg,#101b33,#1a1040);display:flex;align-items:center;justify-content:center;font:13px var(--mono);color:var(--dim);overflow:hidden}
-.thumb img{width:100%;height:100%;object-fit:cover}
-.card.new{border-color:var(--g);box-shadow:0 0 26px rgba(52,211,153,.18)}
-.thumb{position:relative}
-.badge{position:absolute;top:12px;right:12px;z-index:2;font:700 11px var(--mono);letter-spacing:1px;padding:4px 10px;border-radius:99px;background:var(--g);color:#04120c;animation:pl 2s infinite}
-@keyframes pl{50%{box-shadow:0 0 14px var(--g)}}
-.body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
-.body h3{font-size:17px;color:#fff}
-.body p{font-size:14px;color:var(--dim);flex:1}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chips i{font:11px var(--mono);font-style:normal;padding:2px 9px;border-radius:99px;border:1px solid var(--line);color:var(--a)}
-.more{font:13px var(--mono)}
-.about{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
-.term{background:#050810;border:1px solid var(--line);border-radius:12px;font:13px/1.8 var(--mono);overflow:hidden}
-.term div:first-child{background:var(--card);padding:8px 14px;color:var(--dim);border-bottom:1px solid var(--line)}
-.term div+div{padding:14px 16px}
-.term b{color:var(--g);font-weight:400}.term em{color:var(--b);font-style:normal}
-.tl{border-left:2px solid var(--line);padding-left:22px;display:grid;gap:22px}
-.tl article{position:relative}
-.tl article::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--a)}
-.tl h3{font-size:16px;color:#fff}
-.tl small{font:12px var(--mono);color:var(--b)}
-.tl p{font-size:14px;color:var(--dim)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.two h3.s{font:600 16px var(--mono);color:var(--a);margin-bottom:18px}
-ul.c{list-style:none;display:grid;gap:8px;font-size:14px}
-ul.c li{padding:9px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px}
-ul.c small{display:block;color:var(--dim);font:11px var(--mono)}
-.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.ct a{display:block;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--txt);transition:.2s}
-.ct a:hover{border-color:var(--b);box-shadow:0 0 24px rgba(139,92,246,.25)}
-.ct small{display:block;font:12px var(--mono);color:var(--dim)}
-footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;font:12px var(--mono);color:var(--dim)}
-@media(max-width:760px){.hero,.about,.two{grid-template-columns:1fr}.pic{order:-1;width:150px;height:150px}nav ul{gap:12px}.logo{display:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04070a">
+  <meta name="description" content="Portfólio de Marcelo Vasconcelos Santiago, desenvolvedor de software com projetos web, mobile e desktop.">
+  <title>Marcelo Vasconcelos Santiago — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#04070a;--panel:rgba(16,22,18,.72);--panel2:rgba(22,30,24,.85);--text:#eafef0;--muted:#8fa89b;--line:rgba(57,255,106,.22);--accent:#39ff6a;--accent2:#2bd9ff;--accent-ink:#031b0c;--mono:"DM Mono",monospace;--sans:Manrope,system-ui,sans-serif;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;position:relative}
+    a{color:inherit}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    ::selection{background:var(--accent);color:var(--accent-ink)}
+    #matrix{position:fixed;inset:0;z-index:0;opacity:.22;pointer-events:none}
+    body::before{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 20% -10%,rgba(57,255,106,.14),transparent 55%),radial-gradient(ellipse at 90% 10%,rgba(43,217,255,.1),transparent 50%);pointer-events:none}
+    .skip{position:absolute;left:1rem;top:-5rem;padding:.7rem 1rem;background:var(--accent);color:var(--accent-ink);z-index:20;border-radius:999px}.skip:focus{top:1rem}
+    .wrap{width:min(var(--max),calc(100% - 3rem));margin-inline:auto;position:relative;z-index:1}
+    .mono,.eyebrow,.nav a,.tag,.meta{font-family:var(--mono);letter-spacing:.035em}
+    .eyebrow{color:var(--accent);font-size:.76rem;text-transform:uppercase;display:inline-flex;align-items:center;gap:.5rem}
+    .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+    .site-header{position:sticky;top:0;z-index:5;background:rgba(4,7,10,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .brand{text-decoration:none;font-weight:800;letter-spacing:-.04em;font-family:var(--mono)}.brand span{color:var(--accent);text-shadow:0 0 12px rgba(57,255,106,.7)}
+    .nav-links{display:flex;gap:1.45rem;align-items:center}
+    .nav a{font-size:.76rem;text-decoration:none;color:var(--muted);transition:color .2s}
+    .nav a:hover,.nav a:focus-visible{color:var(--accent)}
+    .nav .nav-cta{border:1px solid var(--line);border-radius:999px;padding:.58rem 1.05rem;color:var(--text);transition:.2s}
+    .nav .nav-cta:hover{border-color:var(--accent);box-shadow:0 0 18px rgba(57,255,106,.25)}
+    .hero{padding:clamp(5rem,10vw,9rem) 0 6rem;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.7fr);gap:3rem;align-items:center}
+    .ai-chip{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);border-radius:999px;padding:.4rem .9rem;font:.7rem var(--mono);color:var(--accent2);margin-bottom:1.1rem;background:var(--panel)}
+    .ai-chip svg{width:14px;height:14px}
+    .hero h1{font-size:clamp(3rem,8vw,6.8rem);line-height:.99;letter-spacing:-.075em;max-width:850px;margin:1.1rem 0}
+    .hero h1 em{font-style:normal;color:var(--accent);text-shadow:0 0 28px rgba(57,255,106,.45)}
+    .lead{font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.7;max-width:640px;color:#bdd3c4}
+    .hero-actions{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:2rem}
+    .button{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.3rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.9rem;transition:transform .2s,box-shadow .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button.primary{background:linear-gradient(120deg,var(--accent),var(--accent2));color:var(--accent-ink);box-shadow:0 0 0 rgba(57,255,106,0)}
+    .button.primary:hover{box-shadow:0 10px 32px rgba(57,255,106,.35)}
+    .button.secondary{border:1px solid var(--line);color:var(--text);background:var(--panel)}
+    .button.secondary:hover{border-color:var(--accent);box-shadow:0 0 18px rgba(57,255,106,.2)}
+    .hero-note{border:1px solid var(--line);background:linear-gradient(160deg,var(--panel),rgba(10,14,11,.5));border-radius:1.6rem;padding:1.5rem;position:relative;z-index:1;backdrop-filter:blur(10px)}
+    .hero-note .monogram{width:58px;height:58px;display:grid;place-items:center;border:1px solid var(--line);color:var(--accent);border-radius:50%;font:500 .9rem var(--mono);margin-bottom:1.4rem;box-shadow:inset 0 0 16px rgba(57,255,106,.15)}
+    .hero-note p{margin:.2rem 0;color:var(--muted);font-size:.92rem}
+    .hero-note strong{color:var(--text)}
+    .hero-note .status{display:flex;align-items:center;gap:.55rem;margin-top:1.2rem;color:var(--text);font: .72rem var(--mono);text-transform:uppercase}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);animation:pulse 1.6s infinite}
+    @keyframes pulse{50%{opacity:.3}}
+    .section{padding:5.4rem 0;border-top:1px solid var(--line)}
+    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.2rem}
+    .section-heading h2{margin:.45rem 0 0;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.065em;line-height:1.08}
+    .section-heading p{max-width:460px;color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+    .about-copy{font-size:1.08rem;color:#bdd3c4}.about-copy p{margin:0 0 1rem}
+    .fact-list{border-top:1px solid var(--line)}
+    .fact{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+    .fact span:first-child{color:var(--muted)}.fact span:last-child{text-align:right;font-weight:600}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+    .project{background:var(--panel);border:1px solid var(--line);border-radius:1.5rem;padding:1.6rem;display:flex;flex-direction:column;min-height:310px;transition:border-color .25s,transform .25s,box-shadow .25s;backdrop-filter:blur(8px)}
+    .project:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 14px 40px rgba(57,255,106,.14)}
+    .project-top{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .project-index{font: .74rem var(--mono);color:var(--accent2)}
+    .project-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:1rem;background:var(--panel2);color:var(--accent);font-size:1.15rem;border:1px solid var(--line)}
+    .project h3{font-size:1.55rem;letter-spacing:-.045em;margin:1.35rem 0 .45rem}
+    .project p{margin:0;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+    .tag{font-size:.68rem;color:#cdeedb;border:1px solid var(--line);border-radius:999px;padding:.34rem .65rem}
+    .project-link{display:inline-flex;gap:.45rem;align-items:center;margin-top:auto;padding-top:1.35rem;color:var(--accent);text-decoration:none;font-size:.84rem;font-weight:700}
+    .project-link:hover{text-decoration:underline}
+    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .skill-group{border:1px solid var(--line);border-radius:1.4rem;padding:1.4rem;background:var(--panel);backdrop-filter:blur(8px)}
+    .skill-group h3{font-size:.85rem;color:var(--accent);font:500 .75rem var(--mono);text-transform:uppercase;margin:0 0 1rem}
+    .skill-group p{margin:0;color:#cdeedb;line-height:1.9}
+    .timeline{border-top:1px solid var(--line)}
+    .timeline-row{display:grid;grid-template-columns:230px 1fr;gap:2rem;padding:1.45rem 0;border-bottom:1px solid var(--line)}
+    .timeline-row .meta{font-size:.73rem;color:var(--accent2)}
+    .timeline-row h3{margin:0 0 .3rem;font-size:1.07rem}
+    .timeline-row p{margin:0;color:var(--muted)}
+    .experience-note{border-left:2px solid var(--accent);padding:.9rem 1.1rem;background:var(--panel);color:var(--muted);font-size:.9rem;margin-top:1rem;border-radius:0 1rem 1rem 0}
+    .contact{background:linear-gradient(120deg,var(--accent),var(--accent2));color:var(--accent-ink);border-radius:1.8rem;padding:clamp(1.6rem,5vw,3.5rem);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;box-shadow:0 20px 60px rgba(57,255,106,.18)}
+    .contact .eyebrow{color:#0c3a1c}.contact .eyebrow::before{background:#0c3a1c;box-shadow:none}
+    .contact h2{font-size:clamp(2.2rem,6vw,4.6rem);letter-spacing:-.075em;line-height:1.02;margin:.5rem 0}
+    .contact p{max-width:530px;color:#07350f;margin:0}
+    .contact .button{background:var(--accent-ink);color:var(--text);white-space:nowrap}
+    .footer{padding:2rem 0;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font:.7rem var(--mono)}
+    .footer a{color:var(--muted);text-decoration:none}.footer a:hover{color:var(--accent)}
+    @media(max-width:760px){.wrap{width:min(100% - 2rem,var(--max))}.nav{min-height:64px}.nav-links{gap:.8rem}.nav-links a{font-size:.68rem}.nav-links a:nth-child(2),.nav-links a:nth-child(3){display:none}.hero{padding:5.3rem 0 4rem}.hero-grid{grid-template-columns:1fr;gap:2rem}.hero-note{max-width:440px}.section{padding:4rem 0}.section-heading{display:block}.section-heading p{margin-top:1rem}.about-grid{grid-template-columns:1fr;gap:1rem}.skill-grid{grid-template-columns:1fr 1fr}.timeline-row{grid-template-columns:1fr;gap:.4rem}.contact{grid-template-columns:1fr;align-items:start}.contact .button{justify-self:start}.footer{flex-direction:column}}
+    @media(max-width:480px){.nav-links{gap:.6rem}.nav-links a{font-size:.62rem}.brand{font-size:.88rem}.project-grid,.skill-grid{grid-template-columns:1fr}.project{min-height:280px}.hero h1{font-size:clamp(2.75rem,15vw,4.5rem)}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}#matrix{display:none}}
+  </style>
 </head>
 <body>
-<nav><div class="w"><span class="logo">&lt;marcelo/&gt;</span>
-<ul><li><a href="#projetos">projetos</a></li><li><a href="#sobre">sobre</a></li><li><a href="#formacao">formação</a></li><li><a href="#contato">contato</a></li></ul></div></nav>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Marcelo Santiago, início">MS<span>.</span></a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#tecnologias">Tecnologias</a><a href="#formacao">Formação</a><a class="nav-cta" href="#contato">Contato ↗</a>
+      </div>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg> Código + IA aplicada ao dia a dia</span>
+          <p class="eyebrow">Desenvolvimento de software · Brasília, DF</p>
+          <h1 id="hero-title">Olá, sou<br>Marcelo <em>Santiago.</em></h1>
+          <p class="lead">Desenvolvedor de software com projetos para web, dispositivos móveis e desktop. Gosto de transformar necessidades do dia a dia em ferramentas simples e úteis.</p>
+          <div class="hero-actions"><a class="button primary" href="#projetos">Conheça meus projetos <span aria-hidden="true">↓</span></a><a class="button secondary" href="https://www.linkedin.com/in/marcelo-vasconcelos-santiago-b94491160" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <aside class="hero-note" aria-label="Resumo profissional">
+          <div class="monogram" aria-hidden="true">MS / 01</div>
+          <p><strong>Da ideia ao aplicativo</strong></p><p>Projetos autorais com foco em organização, estudo e tarefas do cotidiano.</p>
+          <div class="status"><span class="dot" aria-hidden="true"></span> Construindo e aprendendo</div>
+        </aside>
+      </div>
+    </section>
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">01 / Sobre</p><h2 id="sobre-title">Tecnologia com<br>propósito prático.</h2></div><p>Uma trajetória guiada pela curiosidade, pelo aprendizado contínuo e pela vontade de criar soluções que sejam úteis na vida real.</p></div>
+        <div class="about-grid">
+          <div class="about-copy"><p>Sou Marcelo Vasconcelos Santiago, formado em Análise e Desenvolvimento de Sistemas e pós-graduado em Engenharia de Software. Tenho explorado diferentes áreas do desenvolvimento — web, mobile e desktop — por meio de estudos e projetos próprios.</p><p>Também estudei fundamentos de design gráfico para complementar meu trabalho com interfaces. Acredito que clareza e simplicidade fazem diferença tanto no visual quanto no uso de um produto.</p></div>
+          <div class="fact-list" aria-label="Informações">
+            <div class="fact"><span>Localização</span><span>Brasília, DF</span></div>
+            <div class="fact"><span>Atuação</span><span>Web · Mobile · Desktop</span></div>
+            <div class="fact"><span>Idiomas</span><span>Português · Inglês intermediário</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="projetos" aria-labelledby="projetos-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">02 / Projetos</p><h2 id="projetos-title">Feitos para<br>resolver algo.</h2></div><p>Aplicativos autorais anunciados publicamente, desenvolvidos para organizar tarefas e apoiar a rotina de estudos.</p></div>
+        <div class="project-grid">
+          <article class="project"><div class="project-top"><span class="project-index">APP ANDROID · 01</span><span class="project-icon" aria-hidden="true">▤</span></div><h3>Lista de Compras</h3><p>Aplicativo Android para organizar listas de compras e tarefas, marcar itens concluídos e consultar o histórico. Os dados ficam armazenados no dispositivo, sem conta ou anúncios.</p><div class="tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">TypeScript</span><span class="tag">AsyncStorage</span><span class="tag">EAS Build</span></div><a class="project-link" href="https://github.com/marcelosantiagok/listadecompras" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a></article>
+          <article class="project"><div class="project-top"><span class="project-index">DESKTOP WINDOWS · 02</span><span class="project-icon" aria-hidden="true">⌘</span></div><h3>Concurso Trainer</h3><p>Aplicativo gratuito para Windows 64 bits que ajuda concurseiros a organizar questões, montar sessões de estudo e simulados, acompanhar resultados e revisar conteúdos.</p><div class="tags"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">SQLite</span><span class="tag">ReportLab</span><span class="tag">PyMuPDF</span></div><a class="project-link" href="https://github.com/marcelosantiagok" target="_blank" rel="noopener noreferrer">Ver perfil e repositórios <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="tecnologias" aria-labelledby="tecnologias-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">03 / Tecnologias</p><h2 id="tecnologias-title">Ferramentas<br>que venho usando.</h2></div><p>Uma seleção baseada nos projetos públicos e nas tecnologias descritas no perfil profissional.</p></div>
+        <div class="skill-grid">
+          <div class="skill-group"><h3>Web</h3><p>HTML · CSS · JavaScript</p></div>
+          <div class="skill-group"><h3>Mobile</h3><p>React Native · Expo · TypeScript · AsyncStorage</p></div>
+          <div class="skill-group"><h3>Desktop e dados</h3><p>Python · PySide6 · SQLite · Java · C# · SQL</p></div>
+          <div class="skill-group"><h3>Documentos e distribuição</h3><p>ReportLab · PyMuPDF · PyInstaller · Inno Setup · EAS Build</p></div>
+          <div class="skill-group"><h3>Design</h3><p>CorelDRAW · Photoshop</p></div>
+          <div class="skill-group"><h3>Prática</h3><p>Desenvolvimento de interfaces · armazenamento local · organização de estudos</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">04 / Experiência</p><h2 id="experiencia-title">Projetos e prática.</h2></div><p>Os registros públicos consultados não trazem detalhes confirmáveis sobre cargos, empresas ou períodos profissionais.</p></div>
+        <div class="timeline">
+          <div class="timeline-row"><span class="meta">PROJETO AUTORAL</span><div><h3>Lista de Compras</h3><p>Aplicativo Android divulgado como gratuito e pronto para uso.</p></div></div>
+          <div class="timeline-row"><span class="meta">PROJETO AUTORAL</span><div><h3>Concurso Trainer</h3><p>Aplicativo desktop para Windows divulgado para estudantes de concursos.</p></div></div>
+        </div>
+        <p class="experience-note">Cargos, empresas e datas de experiência não foram incluídos porque não foi possível confirmá-los nas fontes públicas consultadas.</p>
+      </div>
+    </section>
+    <section class="section" id="formacao" aria-labelledby="formacao-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">05 / Formação</p><h2 id="formacao-title">Base para<br>seguir evoluindo.</h2></div><p>Formação acadêmica informada no site e no perfil público do GitHub.</p></div>
+        <div class="timeline">
+          <div class="timeline-row"><span class="meta">PÓS-GRADUAÇÃO</span><div><h3>Engenharia de Software</h3><p>Universidade Estácio de Sá</p></div></div>
+          <div class="timeline-row"><span class="meta">GRADUAÇÃO</span><div><h3>Análise e Desenvolvimento de Sistemas</h3><p>UNIPLAN-DF</p></div></div>
+          <div class="timeline-row"><span class="meta">CURSOS</span><div><h3>CorelDRAW e Photoshop</h3><p>Conclusão mencionada no site atual; instituição e datas não informadas.</p></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <div class="wrap"><div class="contact"><div><p class="eyebrow">06 / Contato</p><h2 id="contato-title">Vamos conversar?</h2><p>Para falar sobre projetos, desenvolvimento de software ou trocar ideias, encontre-me pelos canais profissionais.</p></div><a class="button" href="mailto:marcelosantiagok@gmail.com">Enviar e-mail <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+  </main>
+  <footer class="footer wrap"><span>© Marcelo Vasconcelos Santiago</span><span><a href="https://github.com/marcelosantiagok" target="_blank" rel="noopener noreferrer">GitHub ↗</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/marcelo-vasconcelos-santiago-b94491160" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></span></footer>
 
-<main class="w">
-<header class="hero">
-<div>
-<div class="tag">&gt; olá, mundo. eu sou</div>
-<h1><span>Marcelo Vasconcelos Santiago</span></h1>
-<div class="type" id="type"></div>
-<p class="lead">Graduado em Análise e Desenvolvimento de Sistemas e pós-graduado em Engenharia de Software. Construo aplicações web e mobile e uso design gráfico para criar interfaces mais atraentes.</p>
-<a class="btn p" href="#projetos">Ver projetos</a>
-<a class="btn" href="https://github.com/marcelosantiagok" target="_blank" rel="noopener">GitHub</a>
-<a class="btn" href="#contato">Contato</a>
-</div>
-<div class="pic"><img src="assets/img/profile.jpeg" alt="Foto de Marcelo Vasconcelos Santiago"></div>
-</header>
-
-<section id="projetos">
-<h2>projetos</h2>
-<div class="grid">
-<article class="card new">
-<div class="thumb"><span class="badge">DESTAQUE</span><img src="https://raw.githubusercontent.com/marcelosantiagok/concurso_trainer/main/screenshots/tela-01.png" alt="Tela de cadastro de questões do Concurso Trainer"></div>
-<div class="body"><h3>Concurso Trainer</h3><p>Olá, concurseiro! Um aplicativo gratuito para cadastrar suas questões, estudar no próprio ritmo e acompanhar sua evolução — sem anúncios e sem assinatura.</p>
-<div class="chips"><i>Gratuito</i><i>Sem anúncios</i><i>Windows 64 bits</i></div>
-<p>Organize por categoria, banca, ano e dificuldade. Faça sessões de estudo e simulados, revise questões e exporte seu banco em JSON para compartilhar com colegas.</p>
-<div style="display:flex;gap:6px;margin:8px 0"><img style="width:32%;height:70px;object-fit:cover;border-radius:6px" src="https://raw.githubusercontent.com/marcelosantiagok/concurso_trainer/main/screenshots/tela-05.png" alt="Sessão de estudo"><img style="width:32%;height:70px;object-fit:cover;border-radius:6px" src="https://raw.githubusercontent.com/marcelosantiagok/concurso_trainer/main/screenshots/tela-07.png" alt="Estatísticas"><img style="width:32%;height:70px;object-fit:cover;border-radius:6px" src="https://raw.githubusercontent.com/marcelosantiagok/concurso_trainer/main/screenshots/tela-09.png" alt="Backup e exportação"></div>
-<a class="more" href="https://github.com/marcelosantiagok/concurso_trainer" target="_blank" rel="noopener">ver o projeto no GitHub →</a>
-<a class="more" href="https://drive.google.com/file/d/1WGrHlfoKhiJhLhY2F_ecixkjdjQu6Hl4/view?usp=drivesdk" target="_blank" rel="noopener">⬇ baixar instalador Windows</a></div>
-</article>
-<article class="card new">
-<div class="thumb"><span class="badge">NOVO</span><img src="https://raw.githubusercontent.com/marcelosantiagok/listadecompras/main/assets/readme/compras.png" alt="App Lista de Compras" onerror="this.replaceWith('listadecompras')"></div>
-<div class="body"><h3>Lista de Compras</h3><p>App Android para organizar compras e tarefas em listas separadas, com importação rápida de itens, quantidades e unidades, histórico com restauração e dados salvos no aparelho.</p>
-<div class="chips"><i>React Native</i><i>Expo</i><i>TypeScript</i><i>Android</i></div>
-<a class="more" href="https://github.com/marcelosantiagok/listadecompras" target="_blank" rel="noopener">ver no GitHub →</a>
-<a class="more" href="https://drive.google.com/file/d/1CKsRKdNizh1ZQNWHoDCa1oi3zqlrWew7/view?usp=drivesdk" target="_blank" rel="noopener">⬇ baixar APK</a></div>
-</article>
-<article class="card">
-<div class="thumb"><img src="assets/images/livroprojetomobile.png" alt="Gerenciador de Livros" onerror="this.replaceWith('gerenciadordelivros')"></div>
-<div class="body"><h3>Gerenciador de Livros</h3><p>Projeto de desenvolvimento mobile para gerenciar uma biblioteca de livros.</p>
-<div class="chips"><i>Java</i><i>Mobile</i></div>
-<a class="more" href="https://github.com/marcelosantiagok/gerenciadordelivros" target="_blank" rel="noopener">ver no GitHub →</a></div>
-</article>
-<article class="card">
-<div class="thumb"><img src="assets/images/1.png" alt="My Residence" onerror="this.replaceWith('myresidence')"></div>
-<div class="body"><h3>My Residence</h3><p>Site desenvolvido na Uniplan-DF, com front-end em HTML e CSS e back-end em PHP.</p>
-<div class="chips"><i>HTML</i><i>CSS</i><i>PHP</i></div>
-<a class="more" href="https://github.com/marcelosantiagok/myresidence" target="_blank" rel="noopener">ver no GitHub →</a></div>
-</article>
-<article class="card">
-<div class="thumb"><img src="assets/images/3.png" alt="Locadora" onerror="this.replaceWith('Locadora')"></div>
-<div class="body"><h3>Locadora</h3><p>Sistema de locadora desenvolvido na Uniplan-DF.</p>
-<div class="chips"><i>C#</i><i>Desktop</i></div>
-<a class="more" href="https://github.com/marcelosantiagok/Locadora" target="_blank" rel="noopener">ver no GitHub →</a></div>
-</article>
-</div>
-</section>
-
-<section id="sobre">
-<h2>sobre</h2>
-<div class="about">
-<div>
-<p>Olá, me chamo Marcelo. Sou graduado em Análise e Desenvolvimento de Sistemas (Uniplan-DF) e pós-graduado em Engenharia de Software (Estácio de Sá).</p><br>
-<p>Ultimamente tenho focado em Design Gráfico para complementar o Front-End. Concluí cursos de Corel Draw e Photoshop, pois acredito que conhecer os fundamentos do design ajuda a criar páginas web mais atraentes.</p><br>
-<p>Também estudo e pratico inglês para alcançar a fluência, já que as tecnologias e o suporte da área de TI são em sua maioria em inglês. Estou publicando meus projetos no GitHub. Deus nos abençoe.</p>
-</div>
-<div class="term"><div>● ● ● marcelo@dev:~</div>
-<div><b>$</b> cat status.json<br>{<br>&nbsp;&nbsp;<em>"cargo"</em>: "Desenvolvedor Web",<br>&nbsp;&nbsp;<em>"local"</em>: "Brasília - DF",<br>&nbsp;&nbsp;<em>"estudando"</em>: ["Design Gráfico", "Inglês"],<br>&nbsp;&nbsp;<em>"aberto_a"</em>: "novos projetos"<br>}</div></div>
-</div>
-</section>
-
-<section id="formacao">
-<h2>formação &amp; experiência</h2>
-<div class="two">
-<div>
-<h3 class="s">$ educação</h3>
-<div class="tl">
-<article><small>2019 — 2021</small><h3>Pós-Graduação em Engenharia de Software</h3><p>Universidade Estácio de Sá</p></article>
-<article><small>2018 — 2019</small><h3>Análise e Desenvolvimento de Sistemas</h3><p>Centro Universitário Planalto do DF (Uniplan-DF)</p></article>
-</div>
-<br>
-<h3 class="s">$ cursos</h3>
-<ul class="c">
-<li><small>Udemy · 2023</small>Masterizando o Photoshop, Recursos Especiais</li>
-<li><small>Hotmart · 2022</small>Curso completo de Corel Draw (40h)</li>
-<li><small>Udemy · 2022</small>Design Gráfico com Corel Draw (10,5h e 21,5h) e Photoshop Definitivo (14,5h)</li>
-<li><small>IFTO · 2020</small>Programador Web (200h)</li>
-<li><small>UFRN · 2020</small>Programador de Dispositivos Móveis (200h)</li>
-<li><small>Senac · 2020</small>Administrador de Banco de Dados (200h)</li>
-<li><small>Fundação Bradesco e Udemy · 2018–2019</small>Lógica de programação e algoritmos</li>
-</ul>
-</div>
-<div>
-<h3 class="s">$ experiência</h3>
-<div class="tl">
-<article><small>2018 — atual</small><h3>Agente de Portaria</h3><p>Excelência Serviços. Controle de acesso, gerenciamento de sistemas de segurança CFTV e apoio a serviços contábeis.</p></article>
-<article><small>2010 — 2018</small><h3>Agente de Portaria</h3><p>A Casa do Síndico</p></article>
-<article><small>2008 — 2009</small><h3>Operador de Caixa (Auxiliar Operacional II)</h3><p>Super Maia Supermercados</p></article>
-</div>
-<br>
-<h3 class="s">$ certificação</h3>
-<ul class="c"><li><small>Star · 2010</small>Curso de Formação de Vigilantes</li></ul>
-</div>
-</div>
-</section>
-
-<section id="contato">
-<h2>contato</h2>
-<div class="ct">
-<a href="mailto:marcelosantiagok@gmail.com"><small>email</small>marcelosantiagok@gmail.com</a>
-<a href="https://github.com/marcelosantiagok" target="_blank" rel="noopener"><small>github</small>marcelosantiagok</a>
-<a href="https://www.linkedin.com/in/marcelo-vasconcelos-santiago-b94491160" target="_blank" rel="noopener"><small>linkedin</small>Marcelo Vasconcelos Santiago</a>
-<a href="https://www.youtube.com/channel/UCpTVUmvnCbpnWv-nI-tjKOw" target="_blank" rel="noopener"><small>youtube</small>Meu canal</a>
-<a href="https://twitter.com/marcelo_santiag" target="_blank" rel="noopener"><small>twitter</small>@marcelo_santiag</a>
-</div>
-</section>
-</main>
-
-<footer>© <span id="y"></span> Marcelo Vasconcelos Santiago · Brasília - DF</footer>
-
-<script>
-document.getElementById('y').textContent=new Date().getFullYear();
-var f=["Desenvolvedor Web","Analista de Sistemas","Engenheiro de Software","Front-End + Design"],i=0,j=0,d=false,el=document.getElementById('type');
-(function t(){var s=f[i];j+=d?-1:1;el.textContent=s.slice(0,j);
-var w=d?35:70;if(!d&&j===s.length){d=true;w=1400}else if(d&&j===0){d=false;i=(i+1)%f.length;w=300}
-setTimeout(t,w)})();
-</script>
+  <script>
+  (function(){
+    var c=document.getElementById('matrix');
+    if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var ctx=c.getContext('2d');
+    var chars="アイウエオカキクケコサシスセソ01".split("");
+    var fontSize=15,cols,drops;
+    function size(){c.width=innerWidth;c.height=innerHeight;cols=Math.floor(c.width/fontSize);drops=Array(cols).fill(1);}
+    size();addEventListener('resize',size);
+    function draw(){
+      ctx.fillStyle="rgba(4,7,10,0.08)";ctx.fillRect(0,0,c.width,c.height);
+      ctx.fillStyle="#39ff6a";ctx.font=fontSize+"px monospace";
+      for(var i=0;i<drops.length;i++){
+        var t=chars[Math.floor(Math.random()*chars.length)];
+        ctx.fillText(t,i*fontSize,drops[i]*fontSize);
+        if(drops[i]*fontSize>c.height&&Math.random()>0.975)drops[i]=0;
+        drops[i]++;
+      }
+    }
+    setInterval(draw,50);
+  })();
+  </script>
 </body>
 </html>
